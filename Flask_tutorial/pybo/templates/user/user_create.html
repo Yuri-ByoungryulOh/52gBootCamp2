@@ -1,0 +1,41 @@
+{% extends 'base.html' %} {% block content %}
+<div class="container">
+    <h5 class="my-3 border-bottom pb-2">계정 생성</h5>
+    <form action="{{url_for('user.user_create')}}" method="post">
+        {{ form.csrf_token }} {% include "form_error.html" %}
+        <div class="mb-3">
+            <label for="user_name" class="form-label">ID</label>
+            <input
+                name="user_name"
+                class="form-control"
+                id="user_name"
+                placeholder="id를 입력하세요" />
+        </div>
+        <div class="mb-2">
+            <label for="password1" class="form-label">PW</label>
+            <input
+                class="form-control"
+                name="password1"
+                id="password1"
+                placeholder="PW를 입력하세요" />
+        </div>
+        <div class="mb-3">
+            <input
+                class="form-control"
+                name="password2"
+                id="password2"
+                placeholder="PW 확인" />
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">ID</label>
+            <input
+                class="form-control"
+                name="email"
+                id="email"
+                placeholder="Email을 입력하세요" />
+        </div>
+        <input type="submit" value="회원가입" class="btn btn-primary" />
+    </form>
+</div>
+
+{% endblock %}
