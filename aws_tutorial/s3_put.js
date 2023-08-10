@@ -4,7 +4,7 @@ var fs = require('fs');
 var s3 = new AWS.S3();
 var params = {
   ACL: 'public-read',
-  Body: fs.createReadStream('pathway-middle-buildings-dark-sky-japan_181624-43078.jpg?w=1380'), 
+  Body: fs.createReadStream('https://marketplace.canva.com/EAE-xnqWvJk/1/0/1600w/canva-retro-smoke-and-round-light-desktop-wallpapers-JLofAI27pCg.jpg'), 
   Bucket: 'lifecoding-test',
   Key: "pathway.jpg",
   ContentType: 'image/jpg',
