@@ -1,0 +1,21 @@
+{
+    "yuri": {
+        "app_function": "App.app",
+        "profile_name": "default",
+        "project_name": "flask22",
+        "runtime": "python3.9",
+        "s3_bucket": "yuri-zappa-test",
+        "aws_region":"ap-northeast-2",
+        "cors": true,
+        "extra_permissions": [
+          {
+            "Effect": "Allow",
+            "Action": [
+              "ssm:GetParameter"
+            ],
+            "Resource": "*"
+            }
+        ],
+      "touch_path": "/swagger"
+    }
+}
